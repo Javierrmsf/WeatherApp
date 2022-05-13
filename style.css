@@ -1,0 +1,23 @@
+.card {
+    background-color: rgb(10, 34, 67);
+    color: white;
+}
+
+#inputcontainer {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+
+}
+
+button {
+    background-color: rgb(10, 34, 67);
+    color:rgb(10, 34, 67);
+}
+
+nav {
+    background-color: rgb(10, 34, 67); 
+    color: white;
+    font-size: larger;
+}
