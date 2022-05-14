@@ -16,10 +16,15 @@ function informationfunction() {
         humidityValue = data ['main']['humidity'];
         DescriptionValue = data['weather'][0]['description'];
         NameValue = data['name'];
+        latvalue = data['coord']['lat'];
+        lonvalue = data['coord']['lon'];
+
         console.log("(fetch primary level)Temperature (ºC): " + temperatureValue);
         console.log("(fetch primary level))Description: " + DescriptionValue);
         console.log("(fetch primary level)Humidity (%): " + humidityValue); 
         console.log("(fetch primary level)Name: " + NameValue);
+        console.log(latvalue);
+        console.log(lonvalue);
 
           
     }).catch(error  => {
@@ -38,15 +43,6 @@ button.addEventListener('click', informationfunction);
 
 
 
-//fetch ('https://api.openweathermap.org/data/2.5/forecast?q='+input.value+'&appid=ae90054c5cfbcc338314940f67ed4e1e')
-//.then(response => response.json())
-//.then(data => {
-    
-//    temperatureValue = data['main']['temp'];
-//    humidityValue = data ['main']['humidity'];
-//    DescriptionValue = data['weather'][0]['description'];
-//    NameValue = data['name'];
-//    console.log("(fetch primary level)Temperature (ºC): " + temperatureValue);
-//    console.log("(fetch primary level))Description: " + DescriptionValue);
-//    console.log("(fetch primary level)Humidity (%): " + humidityValue); 
-//    console.log("(fetch primary level)Name: " + NameValue);
+
+
+
