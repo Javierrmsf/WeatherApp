@@ -5,6 +5,7 @@ var button = document.querySelector('#searchbutton');
 
 var input = document.querySelector('#cityname');
 
+var historyelement;
 
 /////CURRENT 
 var citymain = document.querySelector("#citynametag");
@@ -98,9 +99,10 @@ function informationfunction() {
         citymain.innerHTML = NameValue + " " + realDateValue
 
         //////creating history element////
-        var historyelement = document.createElement('button');
+        historyelement = document.createElement('button');
         historyelement.innerHTML = NameValue
         historyelement.setAttribute("class","btn btn-block btn-info bg-primary");
+        historyelement.setAttribute("id", "historybutton")
         historybank.appendChild(historyelement);
 
           
@@ -266,11 +268,11 @@ function informationfunction() {
             uvindexmain.classList.add("favorable");
         } 
    
-        if( ( thecurrentuvi >=3)&&(thecurrentuvi<=5 )  ) {
+        if( ( thecurrentuvi >=3)&&(thecurrentuvi<=9 )  ) {
             uvindexmain.classList.add("moderate");
         }
         
-        if(thecurrentuvi > 5){
+        if(thecurrentuvi > 10){
             uvindexmain.classList.add("severe");
         }
 
@@ -301,3 +303,14 @@ button.addEventListener('click', informationfunction);
 
 ///////////////////Section in case you click one of the history buttons
 
+
+
+function historyname (){
+    console.log("you clicked the button")
+   
+
+
+
+}
+
+historyelement.addEventListener('click', historyname);
