@@ -22,3 +22,22 @@ nav {
     color: white;
     font-size: larger;
 }
+
+h3 {
+    font-size: medium;
+}
+
+.favorable {
+    background-color: green;
+    color:white
+}
+
+.moderate {
+    background-color: yellow;
+    color:black
+}
+
+.severe {
+    background-color: red;
+    color: white
+}
