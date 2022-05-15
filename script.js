@@ -135,7 +135,6 @@ function informationfunction() {
         console.log("this is the icon0" + officialiconcurrent)
 
         iconmain.appendChild(imgcurrent);
-
         
 
 
