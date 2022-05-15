@@ -13,6 +13,7 @@ var temperaturemain = document.getElementById('temperaturetag');
 var windmain = document.getElementById('windtag');
 var uvindexmain = document.getElementById('uvindextag');
 var humiditymain = document.getElementById('humiditytag');
+var iconmain = document.getElementById('icontag');
 var latvalue = 0;
 var lonvalue = 0;
 
@@ -120,11 +121,20 @@ function informationfunction() {
     var thecurrenthumidity = data.current.humidity
     var thecurrentwind = data.current.wind_speed
     var thecurrentuvi =  data['daily'][0]['uvi']
+    iconmain.innerHTML = ""
     
      temperaturemain.innerHTML ="Temperature: "+  thecurrenttemp + " °C"
      windmain.innerHTML = "Wind Speed: " + thecurrentwind + " m/s"
      uvindexmain.innerHTML = "UV Index: "+ thecurrentuvi
      humiditymain.innerHTML = "Humidity " + thecurrenthumidity + "%"
+     var officialiconcurrent = data['current']['weather'][0]['icon'];
+
+        var imgcurrent = document.createElement('img');
+        imgcurrent.setAttribute('src', "http://openweathermap.org/img/wn/" + officialiconcurrent + ".png")
+        
+        console.log("this is the icon0" + officialiconcurrent)
+
+        iconmain.appendChild(imgcurrent);
 
         
 
